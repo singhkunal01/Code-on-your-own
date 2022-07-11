@@ -1,38 +1,234 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+/* For the home page */
+.homePageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 100vh;
+}
+.form-wrapper {
+  background-color: #282a36;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.form-wrapper img {
+  height: 100px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  font-weight: 300;
+}
+
+footer a {
+  color: #5e8de0;
+  border-bottom: 1px solid #5e8de0;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #1e5ece;
+  border-color: #1e5ece;
+  transition: all 0.3s ease-in-out;
+}
+
+.inputGroup {
+  display: flex;
+  font-weight: 300;
+  flex-direction: column;
+}
+
+.mainLabel {
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.inputBox {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid #fff;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+.inputBox:focus {
+  border: 2px solid #1c1e29;
+  transition: all 0.25s ease;
+}
+.inputBox::placeholder {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* .partition{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.right-image img{
+  height: 450px;
+} */
+
+.btn {
+  border: none;
+  padding: 9px;
+  border-radius: 5px;
+  font-family: 'Poppins',Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.joinBtn {
+  background-color: #5e8de0;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.joinBtn:hover {
+  background-color: #1e5ece;
+  font-weight: 500;
+}
+
+.createInfo {
+  margin-top: 20px;
   text-align: center;
+  font-size: 14px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.createNewBtn {
+  color: #5e8de0;
+  text-decoration: none;
+  border-bottom: 1px solid #5e8de0;
+  transition: all 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.createNewBtn:hover {
+  color: #1e5ece;
+  border-color: #1e5ece;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+/* for the editors page */
+.mainWrapper {
+  display: grid;
+  grid-template-columns: 1fr 230px;
+}
+
+.leftSide {
+  background-color: #1c1e29;
+  padding: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column ;
+}
+
+.sub-wrapper-leftSide{
+  flex-grow: 1;
+}
+
+.clientsList{
+  display: flex;
+  flex-wrap: wrap;/* if the other client is not comes in the same level then it goes downside to maintain the cls */
+  align-items: center;
+  gap: 20px;
+}
+
+
+.client{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-weight: 400;
+  font-size: 14px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.username{
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#borderBelowImgLogo{
+ border-top: 1px dashed #424242;
+}
+
+#editorImg {
+  height: 80px;
+}
+
+.leaveBtn{
+  margin-top: 20px;
+  background-color: #5e8de0;
+  width: 100%;
+}
+.leaveBtn:hover{
+  background-color: #1e5ece;
+}
+
+/* styling the code mirror */
+ 
+.CodeMirror{
+  min-height:calc(100vh - 20px);
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 20px;
+}
+
+/* editint the editors scroll bar */
+
+::-webkit-scrollbar {
+  overflow-x: hidden;
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #282a36 ;
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #50fa7b;
+}
+
+/* Responsiveness */
+/* 
+@media screen and (max-width:1100px) {
+  .form-wrapper{
+    width: 300px;
   }
-  to {
-    transform: rotate(360deg);
+  .partition{
+    flex-direction: column;
+  }
+  .right-image img{
+    height: 300px;
+  }
+
+}
+
+@media screen and (maxx-width:840px) {
+    .form-wrapper{
+    width: 300px;
+  }
+  .partition{
+    flex-direction: column;  
+  }
+  .right-image img{
+    height: 300px;
   }
 }
+*/
