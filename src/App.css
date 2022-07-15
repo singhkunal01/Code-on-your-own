@@ -3,10 +3,23 @@
 /* For the home page */
 .homePageWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   color: #fff;
-  height: 100vh;
+  height: 700px;
+}
+
+#homePage-img {
+  height: 400px;
+  animation: MoveUpDown 2s infinite alternate;
+}
+@keyframes MoveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
 }
 .form-wrapper {
   background-color: #282a36;
@@ -21,8 +34,8 @@
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
+  text-align: center;
+  color: #fff;
   font-weight: 300;
 }
 
@@ -69,15 +82,6 @@ footer a:hover {
   font-weight: 500;
   text-transform: uppercase;
 }
-
-/* .partition{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-.right-image img{
-  height: 450px;
-} */
 
 .btn {
   border: none;
@@ -228,6 +232,7 @@ nav {
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   padding: 5px 20px;
+  cursor: pointer;
   transition: all 0.25s ease-in-out;
 }
 
@@ -328,29 +333,127 @@ nav {
 }
 
 /* Responsiveness */
-/* 
-@media screen and (max-width:1100px) {
-  .form-wrapper{
-    width: 300px;
-  }
-  .partition{
+
+@media screen and (max-width: 1185px) {
+  .homePageWrapper {
     flex-direction: column;
+    height: 100vh;
   }
-  .right-image img{
-    height: 300px;
+  .form-wrapper {
+    width: 450px;
+    padding: 30px;
   }
-
+  .editorImg {
+    height: 105px;
+  }
+  .mainLabel {
+    font-size: 17px;
+  }
+  .createInfo,
+  .createNewBtn {
+    font-size: 15px;
+  }
+    .joinBtn{
+    width: 80px;
+  }
 }
 
-@media screen and (maxx-width:840px) {
-    .form-wrapper{
-    width: 300px;
+@media screen and (max-width: 900px) {
+  #homePage-img {
+    height: 400px;
   }
-  .partition{
-    flex-direction: column;  
+  .form-wrapper {
+    width: 450px;
+    padding: 18px;
   }
-  .right-image img{
-    height: 300px;
+  .form-wrapper img ,.editorImg{
+    height: 90px;
+  }
+  .mainLabel {
+    font-size: 17px;
+  }
+  .createInfo,
+  .createNewBtn,
+  footer {
+    font-size: 16px;
+  }
+  .inputBox {
+    padding: 12px;
+  }
+  .joinBtn{
+    width: 80px;
+  }
+ }
+@media screen and (max-width: 430px) {
+  .homePageWrapper {
+    height: 100vh;
+  }
+  #homePage-img {
+    height: 250px;
+  }
+  .form-wrapper {
+    width: 335px;
+    padding: 19px;
+  }
+  .editorImg {
+    height: 80px;
+  }
+  .mainLabel,.inputBox {
+    font-size: 16px;
+  }
+  .inputBox{
+    padding: 9px;
+  }
+  .createInfo,
+  .createNewBtn,
+  footer {
+    font-size: 14px;
+  }
+  .btn {
+    border: none;
+    padding: 6px;
+    font-size: 1rem;
+  }
+    .joinBtn{
+    width: 80px;
   }
 }
-*/
+@media screen and (max-width: 380px) {
+  .homePageWrapper {
+    height: 100vh;
+  }
+  #homePage-img {
+    height: 240px;
+  }
+  .form-wrapper {
+    width: 290px;
+    padding: 18px;
+  }
+  .form-wrapper img ,.editorImg {
+    height: 72px;
+  }
+  .mainLabel,.inputBox {
+    font-size: 14px;
+  }
+  .inputBox{
+    padding: 8px;
+  }
+  .createInfo,
+  .createNewBtn,
+  footer {
+    font-size: 13px;
+  }
+  .btn {
+    border: none;
+    padding: 4px;
+    font-size: 1rem;
+  }
+  .joinBtn{
+    width: 80px;
+  }
+  .sections .links {
+  font-size: 0.8rem;
+  border-radius: 7px;
+  padding: 4px 18px;
+}
+}
