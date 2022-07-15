@@ -1,13 +1,15 @@
-import { BrowserRouter as Router,Route,Routes} from 'react-router-dom';
-import './App.css';
-import { Home } from './pages/Home';
-import { EditorPages } from './pages/EditorPages';
-import { Toaster } from 'react-hot-toast';
-
-function App() {
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Home } from "./pages/Home";
+import { EditorPages } from "./pages/EditorPages";
+import { Toaster } from "react-hot-toast";
+import { AboutProject } from "./pages/AboutProject";
+export default function App() {
+  // const location = useLocation();
   return (
     <>
       {/* container for the toaster */}
+
       <div>
         <Toaster
           position="top-right"
@@ -17,7 +19,7 @@ function App() {
                 color: "#fff",
                 backgroundColor: "#5e8de0",
               },
-            }, 
+            },
             error: {
               style: {
                 color: "#fff",
@@ -34,6 +36,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutProject />} />
           {/* home page */}
           <Route path="/editor/:roomId" element={<EditorPages />} />
           {/* editor page */}
@@ -42,5 +45,3 @@ function App() {
     </>
   );
 }
-
-export default App;

@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500&family=Poppins:wght@300;400;500&family=Inter:wght@300;400;500&display=swap");
+
 /* For the home page */
 .homePageWrapper {
   display: flex;
@@ -15,7 +16,7 @@
   max-width: 90%;
 }
 
-.form-wrapper img {
+.editorImg {
   height: 100px;
 }
 
@@ -53,14 +54,15 @@ footer a:hover {
   padding: 10px;
   border-radius: 5px;
   outline: none;
-  border: 2px solid #fff;
+border:none,
   margin-bottom: 14px;
   font-size: 1rem;
   font-weight: 600;
+  color: #1e5ece;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 .inputBox:focus {
-  border: 2px solid #1c1e29;
+  border: 1px solid #1e5ece;
   transition: all 0.25s ease;
 }
 .inputBox::placeholder {
@@ -81,7 +83,7 @@ footer a:hover {
   border: none;
   padding: 9px;
   border-radius: 5px;
-  font-family: 'Poppins',Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
@@ -118,9 +120,6 @@ footer a:hover {
   border-color: #1e5ece;
 }
 
-
-
-
 /* for the editors page */
 .mainWrapper {
   display: grid;
@@ -132,55 +131,53 @@ footer a:hover {
   padding: 16px;
   color: #fff;
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
 }
 
-.sub-wrapper-leftSide{
+.sub-wrapper-leftSide {
   flex-grow: 1;
 }
 
-.clientsList{
+.clientsList {
   display: flex;
-  flex-wrap: wrap;/* if the other client is not comes in the same level then it goes downside to maintain the cls */
+  flex-wrap: wrap; /* if the other client is not comes in the same level then it goes downside to maintain the cls */
   align-items: center;
   gap: 20px;
 }
 
-
-.client{
+.client {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-weight: 400;
   font-size: 14px;
-
 }
 
-.username{
+.username {
   margin-top: 10px;
 }
 
-#borderBelowImgLogo{
- border-top: 1px dashed #424242;
+#borderBelowImgLogo {
+  border-top: 1px dashed #424242;
 }
 
-#editorImg {
+.editorImg {
   height: 80px;
 }
 
-.leaveBtn{
+.leaveBtn {
   margin-top: 20px;
   background-color: #5e8de0;
   width: 100%;
 }
-.leaveBtn:hover{
+.leaveBtn:hover {
   background-color: #1e5ece;
 }
 
 /* styling the code mirror */
- 
-.CodeMirror{
-  min-height:calc(100vh - 20px);
+
+.CodeMirror {
+  min-height: calc(100vh - 20px);
   font-size: 14px;
   line-height: 1.6;
   padding-top: 20px;
@@ -196,13 +193,139 @@ footer a:hover {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #282a36 ;
-  
+  background: #282a36;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #50fa7b;
+}
+
+/* styling the navbar  */
+
+nav {
+  background-color: #282a36;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.container-nav {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  scroll-behavior: smooth;
+}
+
+.sections .links {
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 5px 20px;
+  transition: all 0.25s ease-in-out;
+}
+
+.sections .links:hover {
+  color: #6fa4ff;
+}
+/* about page styling */
+.main-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* max-width: 90%; */
+  color: #fff;
+}
+
+.heading {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding: 10px 22px;
+  background-color: #282a36;
+  text-transform: capitalize;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.heading span {
+  color: #6fa4ff;
+}
+.main-container code {
+  color: #6fa4ff;
+  padding: 2px 11px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.points-head {
+  width: 1000px;
+  max-width: 90%;
+  line-height: 2.2;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.steps-count {
+  text-transform: uppercase;
+  border-bottom: 1px solid #6fa4ff;
+  font-family: "Inter", "Poppins";
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.new-room-msg {
+  color: #5e8de0;
+  border-bottom: 1px solid #5e8de0;
+}
+
+.join-btnIn-about {
+  padding: 4px;
+  background-color: #5e8de0;
+  width: 60px;
+  pointer-events: none;
+  font-size: 15px;
+}
+
+.copy-btnIn-about,
+.leave-btnIn-about {
+  width: 140px;
+  background-color: #ffffff;
+}
+.leave-btnIn-about {
+  background-color: #5e8de0;
+}
+
+.social-media-handles {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 3rem;
+}
+.social-media-handles a {
+  text-decoration: none;
+}
+
+.social-media-handles a i {
+  color: #fff;
+  font-size: 1.8rem;
+  transition: all 0.3s ease-in-out;
+
+}
+.fa-linkedin-in:hover {
+  color: #528ff8;
+}
+.fa-github:hover {
+  color: #50fa7b;
+}
+.fa-twitter:hover {
+  color: #1e5ece;
+}
+.fa-telegram:hover {
+  color: #679af2;
 }
 
 /* Responsiveness */

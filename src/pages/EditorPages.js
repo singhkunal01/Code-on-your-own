@@ -26,7 +26,6 @@ export const EditorPages = () => {
       socketRef.current = await initSocket(); //because in the socket file the same function is async thats why we can use await here
       //send the event on the server that a client has joined
 
-
       const handleErrors = e => {
         // console.log("Socket Error", e);
         toast.error("Socket connection failed, Please try again Later.");
@@ -62,7 +61,7 @@ export const EditorPages = () => {
           for syncing it we have to do this */
           socketRef.current.emit(ACTIONS.SYNC_CODE, {
             code: codeRef.current,
-            socketId
+            socketId,
           });
         }
       );
@@ -112,38 +111,40 @@ export const EditorPages = () => {
   }
 
   return (
-    <div className="mainWrapper">
-      <div className="rightSideEditorWrap">
-        <Editor
-          socketRef={socketRef}
-          roomId={roomId}
-          onCodeSyncChange={code => (codeRef.current = code)}
-        />
-      </div>
-      <div className="leftSide">
-        <div className="sub-wrapper-leftSide">
-          <div className="logo">
-            <img
-              id="editorImg"
-              src="/Code On Your Own.png"
-              alt="Code Logo Img"
-            />
-          </div>
-          <p id="borderBelowImgLogo"></p>
-          <p className="connectMessage">Connected</p>
-          <div className="clientsList">
-            {clients.map(client => (
-              <Client key={client.socketId} username={client.username} />
-            ))}
-          </div>
+    <>
+      <div className="mainWrapper">
+        <div className="rightSideEditorWrap">
+          <Editor
+            socketRef={socketRef}
+            roomId={roomId}
+            onCodeSyncChange={code => (codeRef.current = code)}
+          />
         </div>
-        <button className="btn copyIdBtn" onClick={copyRoomId}>
-          Copy Room ID
-        </button>
-        <button className="btn leaveBtn" onClick={leaveRoom}>
-          Leave Room
-        </button>
+        <div className="leftSide">
+          <div className="sub-wrapper-leftSide">
+            <div className="logo">
+              <img
+                className="editorImg"
+                src="/Code On Your Own.png"
+                alt="Code Logo Img"
+              />
+            </div>
+            <p id="borderBelowImgLogo"></p>
+            <p className="connectMessage">Connected</p>
+            <div className="clientsList">
+              {clients.map(client => (
+                <Client key={client.socketId} username={client.username} />
+              ))}
+            </div>
+          </div>
+          <button className="btn copyIdBtn" onClick={copyRoomId}>
+            Copy Room ID
+          </button>
+          <button className="btn leaveBtn" onClick={leaveRoom}>
+            Leave Room
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
