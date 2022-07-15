@@ -1,4 +1,5 @@
 ## WHAT IS CODE-ON-YOUR-OWN ?
+
 <details><summary style="color:orange;"><strong>About Project</strong></summary>
 <li>Basically , <strong>CODE-ON-YOUR-OWN</strong> is used for the coding purpose in Interviews or for the personal use also.
 <li>In this any number of peoples you want to join can join and then Share their Codes with the Help of common <strong>ROOM ID</strong>.
@@ -11,17 +12,20 @@
 ## HOW I MADE IT ?
 
 <details>
-<summary><strong>I made it by using</strong></summary>
-<li style="color:orange;"> React.js   - FrontEnd
+<summary style="color:blue;"><strong>I made it by using</strong></summary>
+<li> React.js   - FrontEnd
 <li> Node.js    - BackEnd
 <li> Express.js - BackEnd
 <li> Socket.io  - Real Time Functionality
 </details>
 
 ## HOW DOES IT LOOKS LIKE ?
-
+<details>
+<summary style="color:blue;"><strong>These are the Snapshots</strong></summary>
 <a href="https://ibb.co/6wgPvsC"><img src="https://i.ibb.co/Gpc2sPS/Screenshot-45.png" alt="Screenshot-45" border="0"></a>
-<a href="https://ibb.co/hWJySFj"><img src="https://i.ibb.co/85L0Hgp/Screenshot-46.png" alt="Screenshot-46" border="0"></a>
+<a href="https://ibb.co/hWJySFj"><img src="https://i.ibb.co/85L0Hgp/Screenshot-46.png" alt="Screenshot-46" border="0"></a>  
+</details>
+
 
 ## WANT TO TAKE LIVE DEMO ?
 
