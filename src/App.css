@@ -54,7 +54,7 @@ footer a:hover {
   padding: 10px;
   border-radius: 5px;
   outline: none;
-border:none,
+  border: none;
   margin-bottom: 14px;
   font-size: 1rem;
   font-weight: 600;
@@ -313,7 +313,6 @@ nav {
   color: #fff;
   font-size: 1.8rem;
   transition: all 0.3s ease-in-out;
-
 }
 .fa-linkedin-in:hover {
   color: #528ff8;
