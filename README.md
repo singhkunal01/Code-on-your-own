@@ -25,8 +25,3 @@
 <a href="https://ibb.co/6wgPvsC"><img src="https://i.ibb.co/Gpc2sPS/Screenshot-45.png" alt="Screenshot-45" border="0"></a>
 <a href="https://ibb.co/hWJySFj"><img src="https://i.ibb.co/85L0Hgp/Screenshot-46.png" alt="Screenshot-46" border="0"></a>  
 </details>
-
-
-## WANT TO TAKE LIVE DEMO ?
-
-[Click Here🔗🔗🔗🔗](https://kunals-code-on-your-own.herokuapp.com/)
